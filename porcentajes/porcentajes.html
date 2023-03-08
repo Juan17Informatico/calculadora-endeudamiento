@@ -18,28 +18,12 @@
       <input type="number" name="price" id="price" />
       <div class="cupones">
         <p>
-          Por favor elige el cupon que tienes:
+          Escribe el descuento que tienes
         </p>
-        <input type="radio" name="discount" id="discount1" value="25" />
-        <label for="discount1">Cupon del 25% de descuento</label>
-        <br />
-        <input type="radio" name="discount" id="discount2" value="10" />
-        <label for="discount2">Cupon del 10% de descuento</label>
-        <br />
-        <input type="radio" name="discount" id="discount3" value="40" />
-        <label for="discount3">Cupon del 40% de descuento</label>
-        <br />
-        <button id="calcularCupon">Calcular</button>
+        <label for="discount">Descuento</label>
+        <input type="text" name="discount" id="discount" />
+        <button id="calcular">Calcular</button>
       </div>
-      <div class="descuentos">
-      <p>
-        Si no tienes cupones y es un descuento personalizado entonces escribe tu
-        descuento:
-      </p>
-      <label for="discount">Descuento</label>
-      <input type="number" name="discount" id="discount" />
-      <button id="calcular">Calcular</button>
-    </div>
       <div class="resultados">
         <p id="resultCupon"></p>
         <p id="result"></p>

@@ -1,47 +1,47 @@
-const inputPrice = document.querySelector('#price');
-const inputDiscount= document.querySelector('#discount');
-const btn = document.querySelector('#calcular');
+const inputPrice = document.querySelector('#price')
+const inputDiscount = document.querySelector('#discount')
+const btn = document.querySelector('#calcular')
 const pResult = document.querySelector('#result')
 //Cupones
-const cupon1 = document.querySelector('#discount1');
-const cupon2 = document.querySelector('#discount2');
-const cupon3 = document.querySelector('#discount3');
-const btnCupon = document.querySelector('#calcularCupon');
-const pResultCupon = document.querySelector('#resultCupon'); 
+let arrayCuponesN = [
+  { name: 'Cupon 1', discount: 25 },
+  { name: 'Cupon 2', discount: 10 },
+  { name: 'Cupon 3', discount: 40 },
+]
 
-btn.addEventListener('click', calcularPrecioConDescuento);
-btnCupon.addEventListener('click', calcularPrecioConCupon);
+btn.addEventListener('click', calcularPrecioConDescuento)
 
-function calcularPrecioConDescuento(){
-    const price = Number(inputPrice.value);
-    const discount = Number(inputDiscount.value);
+function calcularPrecioConDescuento() {
+  const price = Number(inputPrice.value)
+  const coupon = inputDiscount.value
+  let discount
 
-    if(!price || !discount){
-        pResult.innerText = 'Por favor llena el formulario';
-        return;
+  if (!price || !coupon) {
+    pResult.innerText = 'Por favor llena el formulario'
+    return
+  }
+
+  for (let i = 0; i < arrayCuponesN.length; i++) {
+    for (const key in arrayCuponesN[i]) {
+      console.log('1', arrayCuponesN[i].name)
+      let cupones = arrayCuponesN[i].name
+      if (cupones == coupon) {
+        discount = arrayCuponesN[i].discount
+      }
+
     }
+  }
 
-    if(discount > 100){
-        pResult.innerText = 'El descuento no puede ser mayor a 100%';
-        return;
-    }
+  if (discount > 100) {
+    pResult.innerText = 'El descuento no puede ser mayor a 100%'
+    return
+  }
 
-    const newPrice = (price * (100-discount))/100;
-    pResult.innerText = 'El nuevo precio con descuento es $'+newPrice;
-}
+  if(!discount){
+    pResult.innerText = 'El cupon de descuento no existe'
+    return
+  }
 
-function calcularPrecioConCupon(){
-    const descuento1 = Number(cupon1.value);
-    const descuento2 = Number(cupon2.value);
-    const descuento3 = Number(cupon3.value);
-    const price = Number(inputPrice.value);
-
-    const newPrice1 = (price * (100-descuento1))/100;
-    const newPrice2 = (price * (100-descuento2))/100;
-    const newPrice3 = (price * (100-descuento3))/100;
-
-    pResultCupon.innerText = 'El precio con el cupon aplicado es $'+newPrice1;
-    pResultCupon.innerText = 'El precio con el cupon aplicado es $'+newPrice2;
-    pResultCupon.innerText = 'El precio con el cupon aplicado es $'+newPrice3;
-    
+  const newPrice = (price * (100 - discount)) / 100
+  pResult.innerText = 'El nuevo precio con descuento es $' + newPrice
 }
