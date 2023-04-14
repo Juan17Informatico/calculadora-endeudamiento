@@ -1,5 +1,5 @@
 const inputPrice = document.querySelector('#price')
-const inputDiscount = document.querySelector('#discount')
+const inputCoupon = document.querySelector('#coupon')
 const btn = document.querySelector('#calcular')
 const pResult = document.querySelector('#result')
 //Cupones
@@ -13,7 +13,7 @@ btn.addEventListener('click', calcularPrecioConDescuento)
 
 function calcularPrecioConDescuento() {
   const price = Number(inputPrice.value)
-  const coupon = inputDiscount.value
+  const coupon = inputCoupon.value
   let discount
 
   if (!price || !coupon) {
