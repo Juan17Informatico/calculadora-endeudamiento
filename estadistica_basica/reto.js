@@ -1,23 +1,4 @@
-const PlatziMath = {};
-
-PlatziMath.esPar = function esPar(array) {
-    // const a = array.length;
-    // if(a % 2){
-    //     return false;
-    // }else{
-    //     return true;
-    // }
-    //Se niega el principio de la sentencia para que el resultado del residuo de la cantidad de elementos del array se defina si es par o no  
-    //En caso de que el residuo sea 1 es porque no es par y el resultado de la sentencia es (true), negarlo lo convierte en false 
-    //Si el residuo es 0 significa que es par, el negarlo lo convertiría en true
-    return !(array.length % 2);
-    //Recuerda: el número cero los condicionales en JavaScript lo interpretan como false 
-}
-
-/** Calcular el promedio de numeros utilizando la funcion sumarNumeros() y la constante "cantidadNumeros"  */
-PlatziMath.promedioNumeros = function (arrayNP) {
-    // const sumaDeNumeros = sumarNumeros(arrayNP);
-    // let promedio = sumaDeNumeros / cantidadNumeros;
+function promedioNumeros(arrayNP) {
 
     function sumarTodosElementos(currentValue, initialValue) {
         return currentValue + initialValue;
@@ -28,14 +9,7 @@ PlatziMath.promedioNumeros = function (arrayNP) {
 
     return promedio;
 }
-
-
-/**
- * Calcular la mediana
- */
-
-//Esta funcion existe para definir si un numero es par o no
-PlatziMath.esPar = function (array) {
+function esPar(array) {
     // const a = array.length;
     // if(a % 2){
     //     return false;
@@ -48,8 +22,7 @@ PlatziMath.esPar = function (array) {
     return !(array.length % 2);
     //Recuerda: el número cero los condicionales en JavaScript lo interpretan como false 
 }
-
-PlatziMath.calcularMediana = function (list) {
+function calcularMediana(list) {
     //Define si la lista es par 
     const listPar = esPar(list);
     
@@ -86,7 +59,7 @@ PlatziMath.calcularMediana = function (list) {
 /**
  * Calcular la moda
 */
-PlatziMath.calcularModa = function (list){
+function calcularModa(list){
     const listCount = {};
 
     for(let i = 0; i < list.length; i++){
@@ -108,7 +81,7 @@ PlatziMath.calcularModa = function (list){
  * Función ordenar lista
 */
 
-PlatziMath.ordenarListaBidimensional = function (list, i){
+function ordenarListaBidimensional(list, i){
     list.sort(function (a,b){
         return a[i]-b[i];
     });
@@ -116,13 +89,40 @@ PlatziMath.ordenarListaBidimensional = function (list, i){
 }
 
 /**
- * Playground: Transforma Objetos en Arrays
+ * Calcular la media aritmética simple
  */
-function solutionPlayground(obj){
-    const array = [];
-    const ob = {
-        123: 'Juanito alcachofa',
-        456: 'Alcaparra',
-    } 
-    
-}
+const notes  = [
+    {
+        course: 'Educación Física',
+        note: 10,
+        credit: 2,
+    },
+    {
+        course: 'Programación',
+        note: 8,
+        credit: 5,
+    },
+    {
+        course: 'Finanzas Personales',
+        note: 7,
+        credit: 5,
+    },
+];
+const notesWithCredit = notes.map(function (noteObject) {
+    return noteObject.note * noteObject.credit;
+});
+const sumOfNotesWithCredit = notesWithCredit.reduce(
+    function (sum = 0, newVal) {
+        return sum + newVal;
+    }
+);
+const credits = notes.map(function (noteObject) {
+    return noteObject.credit;
+});
+
+const sumOfCredits = credits.reduce(
+    function (sum = 0, newVal) {
+        return sum + newVal;
+    }
+);
+const promedioPonderadoNotasConCreditos = sumOfNotesWithCredit / sumOfCredits;

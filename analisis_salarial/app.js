@@ -51,7 +51,7 @@ PlatziMath.esPar = function (array) {
 
 PlatziMath.calcularMediana = function (list) {
     //Define si la lista es par 
-    const listPar = esPar(list);
+    const listPar = PlatziMath.esPar(list);
     
     //El método sort ordena elementos, en este caso, ordena elementos según el parámetro indicado, o sea, de menor a mayor 
     list.sort(function (a,b){
@@ -68,7 +68,7 @@ PlatziMath.calcularMediana = function (list) {
         listaMitades.push(mitad1ListaPar);
         listaMitades.push(mitad2ListaPar);
         //Se crea una constante para almacenar el promedio de los valores de las mitades
-        const medianaListaPar = promedioNumeros(listaMitades);
+        const medianaListaPar = PlatziMath.promedioNumeros(listaMitades);
         
         return medianaListaPar;
     } else {
@@ -107,6 +107,22 @@ PlatziMath.calcularModa = function (list){
 /**
  * Función ordenar lista
 */
+
+PlatziMath.ordernarLista = function(listaDesordenada){
+    function ordernarListaSort(valorAcumulado, nuevoValor){
+        return valorAcumulado - nuevoValor;
+    }
+
+    const lista = listaDesordenada.sort(ordernarListaSort);
+    
+    return lista;
+}
+
+PlatziMath.ordernarListaMenor = function(listaDesordenada){
+    const lista = listaDesordenada.sort((a,b) => b - a);
+
+    return lista;
+}
 
 PlatziMath.ordenarListaBidimensional = function (list, i){
     list.sort(function (a,b){

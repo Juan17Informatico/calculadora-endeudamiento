@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tu capacidad de Endeudamiento</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section class="contenedor-superior">
+            <div class="contenedor-div">
+                <label for="inputIngresos" class="">Cuanto Ganas al mes</label>
+                <input type="text" name="inputIngresos" id="inputIngresos" class="inputIngresos">
+            </div>
+            <div class="contenedor-div">
+                <label for="inputGastos" class="">Cuanto Gastas al mes</label>
+                <input type="text" name="inputGastos" id="inputGastos" class="inputGastos">
+            </div>
+            <div class="contenedor-div">
+                <label for="inputAporteDeuda" class="">Cuanto aportas a la deuda existente actualmente</label>
+                <input type="text" name="inputAporteDeuda" id="inputAporteDeuda" class="inputAporteDeuda">
+            </div>
+        </section>
+        <section class="contenedor-inferior">
+            <div class="contenedor-div">
+                <div>
+                    <p id="pResult" class="pResult"></p>
+                </div>
+                <button id="btnCalcular" class="btnCalcular">Calcular</button>
+            </div>
+        </section>
+    </main>
+    <script src="./reto.js"></script>
+</body>
+
+</html>
