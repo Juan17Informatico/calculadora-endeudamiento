@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,3 +31,37 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfico de Barras</title>
+</head>
+<body>
+    <canvas id="grafico" width="400" height="600"></canvas>
+
+    <script>
+        // Obtén el contexto del lienzo
+        var canvas = document.getElementById("grafico");
+        var ctx = canvas.getContext("2d");
+
+        // Datos del gráfico (puedes ajustar estos valores)
+        var datos = [20, 40, 30, 50, 70];
+
+        // Configuración del gráfico
+        var barWidth = 30;
+        var barSpacing = 10;
+        var startX = 10;
+        var barColor = "blue";
+
+        // Dibuja las barras
+        for (var i = 0; i < datos.length; i++) {
+            var barHeight = datos[i];
+            ctx.fillStyle = barColor;
+            ctx.fillRect(startX, canvas.height - barHeight, barWidth, barHeight);
+            startX += barWidth + barSpacing;
+        }
+    </script>
+</body>
+</html>
+>>>>>>> 0aa921b963b1160506c8ee5b6097c82b53300e5b

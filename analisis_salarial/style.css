@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -41,3 +42,48 @@ section > div{
     border-radius: 20px;
 }
 
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccf9ff;
+    gap: 20px;
+    padding: 10px;
+}
+
+.contenedor-superior, .contenedor-inferior{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 50vh;
+    gap: 20px;
+}
+
+section > div{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #fffcfc;
+    border-radius: 20px;
+}
+
+>>>>>>> 0aa921b963b1160506c8ee5b6097c82b53300e5b
