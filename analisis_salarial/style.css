@@ -1,20 +1,15 @@
-/*Variables*/
-:root{
-    --background-main: #34526c;
-    --color: #e3f2ff;
+/* Definición de variables CSS personalizadas */
+:root {
+    --background-main: #34526c; /* Color de fondo principal */
+    --color: #e3f2ff; /* Color de texto principal */
 }
-/* Reset de estilos y fuente global */
+
+/* Reset de estilos y definición de fuente global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Estilos para el cuerpo principal */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Establece la fuente global como Roboto */
 }
 
 /* Estilos para el encabezado principal */
@@ -23,10 +18,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: var(--background-main);
-    gap: 30px;
-    padding: 10px;
+    height: 100vh; /* Establece la altura del contenedor principal al 100% del viewport */
+    background-color: var(--background-main); /* Utiliza el color de fondo principal definido en las variables */
+    gap: 30px; /* Espacio entre elementos secundarios dentro de .main */
+    padding: 10px; /* Relleno alrededor de .main */
 }
 
 /* Estilos para los contenedores superiores e inferiores */
@@ -34,27 +29,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: white;
-    /* border: 2px solid #fffcfc; */
-    border-radius: 20px;
+    align-items: center; /* Fondo blanco para los contenedores */
+    border-radius: 20px; /* Borde redondeado */
+    width: 500px; /* Ancho del contenedor principal */
+    height: 50vh; /* Altura del contenedor principal al 50% del viewport */
 }
 
-.container{
-    width: 500px;
-    height: 50vh;    
+/* Estilos para .container-1 */
+.container-1 {
+    padding: 20px; /* Relleno interno */
+    background-color: var(--background-main); /* Utiliza el color de fondo principal definido en las variables */
+    color: var(--color); /* Utiliza el color de texto definido en las variables */
+    border: #3c5a75 2px solid; /* Borde sólido con color definido */
+    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
 }
 
-.container-1{
-    border: #3c5a75 2px solid;
-    background-color: var(--background-main);
-    box-shadow: 5px 10px 10px 10px #172c3d;
-    padding: 20px;
-
-    color: var(--color);
-}
-
-.container-1 input{
+.container-1 input {
     width: 80%;
     height: 40px;
     border: none;
@@ -63,7 +53,8 @@ body {
     margin: 10px;
     font-size: 20px;
 }
-.container-1 button{
+
+.container-1 button {
     width: 60%;
     height: 40px;
     border: none;
@@ -76,29 +67,45 @@ body {
     font-weight: 500;
 }
 
-.container-1 button:hover{
+.container-1 button:hover {
     background-color: #3c5a75;
     color: var(--color);
     cursor: pointer;
     border: var(--color) 1px solid;
 }
 
-.container-2{
-    border: #3c5a75 2px solid;
-    background-color: var(--color);
-    color: var(--background-main);
-    box-shadow: 5px 10px 10px 10px #172c3d;
-    padding: 20px;
-    font-weight: 500;
-    font-size: 20px;
+/* Estilos para .container-2 */
+.container-2 {
+    border: #3c5a75 2px solid; /* Borde sólido con color definido */
+    background-color: var(--color); /* Utiliza el color de fondo definido en las variables */
+    color: var(--background-main); /* Utiliza el color de texto definido en las variables */
+    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+    padding: 20px; /* Relleno interno */
 }
-/* Media Queries */
+.container-2 .h2{
+    display: inherit;
+    font-size: 30px;
+    font-weight: 700;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-2 .pResult{
+    display: inherit;
+    justify-content: start;
+    height: 10vh;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Media Queries para pantallas con un ancho máximo de 700px */
 @media (max-width: 700px) {
     .main {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la dirección de flexión a columna */
     }
     .container {
-        width: 100%;
-        height: 100%;
+        width: 100%; /* Ancho del contenedor al 100% del viewport */
+        height: 100%; /* Altura del contenedor al 100% del viewport */
     }
 }
