@@ -2,6 +2,8 @@
 :root {
     --background-main: #34526c; /* Color de fondo principal */
     --color: #e3f2ff; /* Color de texto principal */
+    --secondary-color: #3c5a75; /* Color de texto secundario */
+    --white: #fff;
 }
 
 /* Reset de estilos y definición de fuente global */
@@ -23,22 +25,86 @@
     gap: 60px; /* Espacio entre elementos secundarios dentro de .main */
     padding: 10px; /* Relleno alrededor de .main */
 }
+/*
+    main > div.container.container-1/2 > section.section.section-project > div
+*/
 .container{
     display: flex;
-    height: 50%;
     justify-content: center;
     align-items: center;
-}
-.container-1{
+    height: 100%;
+    width: 90%;
     flex-direction: column;
 }
-.container-2{
-    flex-direction: row;
+.container-2 p{
+    width: 600px;
+    text-align: center;
+    font-size: 32px;
+    color: var(--white);
+    margin: 10px 10px 30px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+}
+.container-2 > .inside-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Section se encuentra dentro de container*/
+.project-p{ 
+    font-size: 32px;
+    color: var(--white);
+    margin: 10px 10px 30px;
+    padding: 10px 10px;
+    border-radius: 15px;
+
+    transition: all 0.1s ease-in-out;
+    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+}
+.section{
+    background-color: var(--white);
+    margin: 10px;
+    padding: 10px 0px;
+    border-radius: 15px;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+}
+
+.section-project{
+    width: 500px;
+    height: 75%;
+    text-align: center;
+}
+
+.section-project > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 98%;
+    background-image: url(./img/proyecto_curso.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.menu-link{
+    width: 100%;
+    height: 100%;
+}
+
+.section-project:hover, .section_project > div:hover{
+    width: 550px;
+    height: 77%;  
+    cursor: pointer;
+    filter: brightness(0.5);
 }
 
 
-
-.section{
-    background-color: white;
-    margin: 10px;
+/*Section 2*/
+.section-2{
+    width: 250px;
+    height: 100%;
 }
