@@ -37,7 +37,6 @@
     flex-direction: column;
 }
 .container-2 p{
-    width: 600px;
     text-align: center;
     font-size: 32px;
     color: var(--white);
@@ -75,7 +74,7 @@
 
 .section-project{
     width: 500px;
-    height: 75%;
+    height: 300px;
     text-align: center;
 }
 
@@ -95,11 +94,12 @@
 .menu-link{
     width: 100%;
     height: 100%;
+    color: transparent;
 }
 
-.section-project:hover, .section_project > div:hover{
+.section-project:hover{
+    height: 314px;
     width: 550px;
-    height: 77%;  
     cursor: pointer;
     filter: brightness(0.5);
 }
@@ -123,6 +123,7 @@
     color: var(--background-main);
     font-size: 18px;
 }
+
 .section-2 a:hover{
     color: var(--white);
 }
@@ -131,4 +132,46 @@
     background-color: var(--background-main);
     color: var(--white);
     cursor: pointer;
+}
+
+/*Dispositivos moviles*/
+
+@media screen and (max-width: 768px){
+    .container-2 p{
+        width: 100%;
+        font-size: 18px;
+    }
+    .section-project{
+        width: 100%;
+        height: 100%;
+    }
+    .section-project > div{
+        width: 100%;
+    }
+    .section-project:hover, .section_project > div:hover{
+        width: 100%;
+        height: 77%;  
+        cursor: pointer;
+    }
+
+    .project-p{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .inside-container{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .menu-link{
+        width: 100%;
+        height:100%;
+        text-align: center;
+    }
+    .section-project div .menu-link{
+        color: var(--white);
+        font-weight: 900;
+        font-size: 20px;
+    }
 }
