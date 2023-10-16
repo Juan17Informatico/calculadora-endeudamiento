@@ -1,9 +1,18 @@
 console.group('Cuadrado')
 
-const ladoCuadrado = 5
-const perimetroCuadrado = ladoCuadrado * 4
-const areaCuadrado = ladoCuadrado ** 2
+//Variables
+const ladoCuadrado = document.getElementById('ladoCuadrado');
+const btnCalcularAreaCuadrado = document.getElementById('btnCalcularAreaCuadrado');
+const btnCalcularPerimetroCuadrado = document.getElementById('btnCalcularPerimetroCuadrado');
+//Variables: para mostrar resultados
+const resultadoAreaCuadrado = document.getElementById('resultAreaCuadrado');
+const resultadoPerimetroCuadrado = document.getElementById('resultPerimetroCuadrado');
 
+/**
+ * 
+ * @param {*} lado 
+ * @returns 
+ */
 function calcularCuadrado(lado) {
   return {
     perimetro: lado * 4,
@@ -11,11 +20,16 @@ function calcularCuadrado(lado) {
   }
 }
 
-console.log({
-  ladoCuadrado,
-  perimetroCuadrado,
-  areaCuadrado,
+btnCalcularAreaCuadrado.addEventListener('click', () => {
+  const area = calcularCuadrado(ladoCuadrado.value);
+  resultadoAreaCuadrado.innerHTML = `El área del cuadrado es: ${area.area}`;
 })
+
+btnCalcularPerimetroCuadrado.addEventListener('click', () => {
+  const perimetro = calcularCuadrado(ladoCuadrado.value);
+  resultadoPerimetroCuadrado.innerHTML = `El perimetro del cuadrado es: ${perimetro.perimetro}`;
+})
+
 console.groupEnd()
 console.group('Triangulo')
 
