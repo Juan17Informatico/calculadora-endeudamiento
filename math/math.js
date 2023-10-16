@@ -10,11 +10,12 @@ const btnCalcularPerimetroCuadrado = document.getElementById('btnCalcularPerimet
 const resultadoAreaCuadrado = document.getElementById('resultAreaCuadrado');  // Elemento HTML para mostrar el resultado del cálculo del área del cuadrado.
 const resultadoPerimetroCuadrado = document.getElementById('resultPerimetroCuadrado');  // Elemento HTML para mostrar el resultado del cálculo del perímetro del cuadrado.
 
+
 /**
  * Función para validar si un valor es un número.
  * @param {number} numero - El valor a ser validado.
  * @returns {number} - Retorna 1 si el valor es un número, de lo contrario, retorna 0.
- */
+*/
 function validarNumero(numero) {
   if (isNaN(numero)) {
     return 0;  // No es un número
@@ -27,7 +28,7 @@ function validarNumero(numero) {
  * Función para calcular el perímetro y el área de un cuadrado.
  * @param {number} lado - La longitud del lado del cuadrado.
  * @returns {object} - Un objeto con las propiedades 'perimetro' y 'area' que contienen los cálculos correspondientes.
- */
+*/
 function calcularCuadrado(lado) {
   return {
     perimetro: lado * 4,  // Cálculo del perímetro del cuadrado.
@@ -35,15 +36,16 @@ function calcularCuadrado(lado) {
   }
 }
 
+
 // Evento para el botón de cálculo de área del cuadrado.
 btnCalcularAreaCuadrado.addEventListener('click', () => {
-  const area = calcularCuadrado(ladoCuadrado.value);  // Calcula el área del cuadrado.
+  const areaCuadrado = calcularCuadrado(ladoCuadrado.value);  // Obtenemos el objeto con los cálculos del área y el perímetro del cuadrado.
   // Validamos que el valor ingresado sea un número
-  const validacionArea = validarNumero(area.area);
+  const validacionArea = validarNumero(areaCuadrado.area);
 
   if (validacionArea) {
     // Muestra el resultado del cálculo del área en el elemento HTML correspondiente.
-    resultadoAreaCuadrado.innerHTML = `El área del cuadrado es: ${area.area}`;
+    resultadoAreaCuadrado.innerHTML = `El área del cuadrado es: ${areaCuadrado.area}`;
   } else {
     // Muestra un mensaje de error si el valor no es un número válido.
     resultadoAreaCuadrado.innerHTML = `El valor ingresado no es un número válido`;
@@ -52,20 +54,22 @@ btnCalcularAreaCuadrado.addEventListener('click', () => {
 
 // Evento para el botón de cálculo de perímetro del cuadrado.
 btnCalcularPerimetroCuadrado.addEventListener('click', () => {
-  const perimetro = calcularCuadrado(ladoCuadrado.value);  // Calcula el perímetro del cuadrado.
+  const perimetroCuadrado = calcularCuadrado(ladoCuadrado.value);  // Obtenemos el objeto con los cálculos del área y el perímetro del cuadrado.
   // Validamos que el valor ingresado sea un número
-  const validacionPerimetro = validarNumero(perimetro.perimetro);
+  const validacionPerimetro = validarNumero(perimetroCuadrado.perimetro);
 
   if (validacionPerimetro) {
     // Muestra el resultado del cálculo del perímetro en el elemento HTML correspondiente.
-    resultadoPerimetroCuadrado.innerHTML = `El perímetro del cuadrado es: ${perimetro.perimetro}`;
+    resultadoPerimetroCuadrado.innerHTML = `El perímetro del cuadrado es: ${perimetroCuadrado.perimetro}`;
   } else {
     // Muestra un mensaje de error si el valor no es un número válido.
     resultadoPerimetroCuadrado.innerHTML = `El valor ingresado no es un número válido`;
   }
 })
 
-/** */
+/**
+ * 
+ */
 console.group('Triangulo')
 
 const ladoTriangulo1 = 6
