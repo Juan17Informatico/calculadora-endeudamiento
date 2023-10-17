@@ -6,31 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller de Matemáticas con JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
         <!--Formulario para input del lado del cuadrado-->
-        <div>
-            <label>Ingrese el lado del cuadrado</label>
-            <input type="text" name="ladoCuadrado" id="ladoCuadrado">
-            <button id="btnCalcularAreaCuadrado">Calcular área</button>
-            <button id="btnCalcularPerimetroCuadrado">Calcular Perimetro</button>
-            <p id="resultAreaCuadrado" class="resultAreaCuadrado"></p>
-            <p id="resultPerimetroCuadrado" class="resultPerimetroCuadrado"></p>
-        </div>
-        <div>
-            <label>Ingrese el lado del cuadrado</label>
-            <input type="text" name="ladoCuadrado" id="ladoCuadrado">
-            <button id="btnCalcularAreaCuadrado">Calcular área</button>
-            <button id="btnCalcularPerimetroCuadrado">Calcular Perimetro</button>
-            <p id="resultAreaCuadrado" class="resultAreaCuadrado"></p>
-            <p id="resultPerimetroCuadrado" class="resultPerimetroCuadrado"></p>
-        </div>
-        <div>
+        <section class="section">
 
-        </div>
+            <section class="subsection-input">
+                <label>Ingrese el lado del cuadrado</label>
+                <input type="text" name="ladoCuadrado" id="ladoCuadrado">
+            </section>
+
+            <section class="subsection-button">
+                <button id="btnCalcularAreaCuadrado">Calcular área</button>
+                <button id="btnCalcularPerimetroCuadrado">Calcular Perimetro</button>
+            </section>
+
+            <section class="subsection-result">
+                <p id="resultAreaCuadrado" class="resultAreaCuadrado"></p>
+                <p id="resultPerimetroCuadrado" class="resultPerimetroCuadrado"></p>
+            </section>
+
+        </section>
+
+        <!--Formulario para input del lado del cuadrado-->
+        <section class="section">
+            <section class="subsection subsection--1">
+                <p>Calcular altura, área y perímetro de un triangulo isosceles</p>
+
+                <section class="subsection-input">
+                    <label for="ladoTrianguloIsosceles">Ingresa el valor del lado</label>
+                    <input type="text" name="ladoTrianguloIsosceles" id="ladoTrianguloIsosceles">
+                </section>
+
+                <section class="subsection-input">
+                    <label for="baseTrianguloIsosceles">Ingresa el valor de la base</label>
+                    <input type="text" name="baseTrianguloIsosceles" id="baseTrianguloIsosceles">
+                </section>
+
+                <section class="subsection-button">
+                    <button id="btnCalcularAlturaTriangulo">Calcular Altura</button>
+                    <button id="btnCalcularAreaTrianguloIsos">Calcular área</button>
+                    <button id="btnCalcularPerimetroTrianguloIsos">Calcular Perimetro</button>
+                </section>
+
+                <section class="subsection-result">
+                    <p id="resultAreaTrianguloIsos" class="resultAreaTrianguloIsos"></p>
+                    <p id="resultPerimetroTrianguloIsos" class="resultPerimetroTrianguloIsos"></p>
+                </section>
+
+            </section>
+
+            <section class="subsection subsection--2">
+                <p>Calcular altura, área y perímetro de un Triangulo Escaleno</p>
+                <input type="text" name="ladoCuadrado" id="ladoCuadrado">
+                <button id="btnCalcularAreaCuadrado">Calcular área</button>
+                <button id="btnCalcularPerimetroCuadrado">Calcular Perimetro</button>
+                <p id="resultAreaCuadrado" class="resultAreaCuadrado"></p>
+                <p id="resultPerimetroCuadrado" class="resultPerimetroCuadrado"></p>
+            </section>
+        </section>
+
+        <!--Formulario para el circulo-->
+        <section class="section">
+
+        </section>
     </main>
+    <script src="./triangulo.js"></script>
     <script src="./math.js"></script>
 </body>
 

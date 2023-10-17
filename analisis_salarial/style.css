@@ -2,6 +2,7 @@
 :root {
     --background-main: #34526c; /* Color de fondo principal */
     --color: #e3f2ff; /* Color de texto principal */
+    --shadow: #172c3d;
 }
 
 /* Reset de estilos y definición de fuente global */
@@ -41,7 +42,7 @@
     background-color: var(--background-main); /* Utiliza el color de fondo principal definido en las variables */
     color: var(--color); /* Utiliza el color de texto definido en las variables */
     border: #3c5a75 2px solid; /* Borde sólido con color definido */
-    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+    box-shadow: 5px 10px 10px 10px var(--shadow); /* Sombra */
 }
 
 .container-1 input {
@@ -79,7 +80,7 @@
     border: #3c5a75 2px solid; /* Borde sólido con color definido */
     background-color: var(--color); /* Utiliza el color de fondo definido en las variables */
     color: var(--background-main); /* Utiliza el color de texto definido en las variables */
-    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+    box-shadow: 5px 10px 10px 10px var(--shadow); /* Sombra */
     padding: 20px; /* Relleno interno */
 }
 .container-2 .h2{

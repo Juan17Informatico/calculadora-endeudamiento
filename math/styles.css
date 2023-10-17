@@ -1,0 +1,66 @@
+/* Definición de variables CSS personalizadas */
+:root {
+    --background-main: #34526c; /* Color de fondo principal */
+    --color: #e3f2ff; /* Color de texto principal */
+    --secondary-color: #3c5a75; /* Color de texto secundario */
+    --white: #fff;
+    --shadow: #172c3d
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center; 
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-main);
+    color: var(--color);
+
+    gap: 20px;
+}
+
+main > .section{
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-color);
+    box-shadow: 5px 10px 10px 10px var(--shadow);
+    border-radius: 15px;
+}
+
+.subsection{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    gap: 5px;
+}
+
+.subsection-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.subsection-input input{
+    width: 50%;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.subsection-input input:focus{
+    outline: none;
+}
+
+
+

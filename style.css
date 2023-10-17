@@ -4,6 +4,7 @@
     --color: #e3f2ff; /* Color de texto principal */
     --secondary-color: #3c5a75; /* Color de texto secundario */
     --white: #fff;
+    --shadow: #172c3d;
 }
 
 /* Reset de estilos y definición de fuente global */
@@ -43,7 +44,7 @@
     margin: 10px 10px 30px;
     padding: 10px 10px;
     border-radius: 15px;
-    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+    box-shadow: 5px 10px 10px 10px var(--shadow); /* Sombra */
 }
 .container-2 > .inside-container{
     display: flex;
@@ -61,7 +62,7 @@
     border-radius: 15px;
 
     transition: all 0.1s ease-in-out;
-    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+    box-shadow: 5px 10px 10px 10px var(--shadow); /* Sombra */
 }
 .section{
     background-color: var(--white);
@@ -69,7 +70,7 @@
     padding: 10px 0px;
     border-radius: 15px;
     transition: all 0.1s ease-in-out;
-    box-shadow: 5px 10px 10px 10px #172c3d; /* Sombra */
+    box-shadow: 5px 10px 10px 10px var(--shadow); /* Sombra */
 }
 
 .section-project{
