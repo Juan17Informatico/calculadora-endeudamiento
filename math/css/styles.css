@@ -23,19 +23,30 @@ main{
     width: 100vw;
     background-color: var(--background-main);
     color: var(--color);
-
     gap: 20px;
 }
 
 main > .section{
     text-align: center;
     margin: 0 auto;
+    padding: 30px;
     width: 500px;
     height: 500px;
     background-color: var(--secondary-color);
     box-shadow: 5px 10px 10px 10px var(--shadow);
     border-radius: 15px;
 }
+.subsection-img{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 50%;
+}
+
+.section img{ 
+    width: 150px;
+}
+
 
 .subsection{
     display: flex;
@@ -55,12 +66,39 @@ main > .section{
 .subsection-input input{
     width: 50%;
     height: 30px;
+    font-size: 16px;
     border-radius: 15px;
+    padding: 10px;
+    border: none;
+    text-align: center;
 }
 
 .subsection-input input:focus{
     outline: none;
 }
+
+.subsection-button{
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.subsection-button > button{
+    width: 200px;
+    height: 25px;
+    margin: 2px;
+    border-radius: 15px;
+    border: none;
+}
+
+.subsection-button > button:hover{
+    background-color: var(--background-main);
+    border: 1px solid var(--shadow);
+    color: var(--color);
+    cursor: pointer;
+
+}
+
+
 
 
 
