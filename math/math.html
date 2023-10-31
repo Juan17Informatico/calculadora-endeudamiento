@@ -16,8 +16,8 @@
 <body>
     <main>
         <!--Formulario para input del lado del cuadrado-->
-        <section class="section">
-
+        <section class="section section-cuadrado">
+            <h2>Calcular área y perímetro de cuadrado</h2>
             <section class="subsection-input">
                 <label>Ingrese el lado del cuadrado</label>
                 <input type="text" name="ladoCuadrado" id="ladoCuadrado">
@@ -39,9 +39,11 @@
         </section>
 
         <!--Formulario para input del lado del triangulo-->
-        <section class="section">
+        <section class="section section-triangulo">
+
+            <h2>Calcular altura, área y perímetro de un triangulo isosceles</h2>
+            
             <section class="subsection subsection--1">
-                <p>Calcular altura, área y perímetro de un triangulo isosceles</p>
 
                 <section class="subsection-input">
                     <label for="ladoTrianguloIsos">Ingresa el valor del lado</label>
@@ -65,31 +67,58 @@
 
 
             </section>
-            <hr>
+
+            <!-- <hr> -->
+
             <section class="subsection subsection--2">
-                <p>Calcular altura, área y perímetro de un Triangulo Escaleno</p>
+
+                <h2>Calcular altura, área y perímetro de un Triangulo Escaleno</h2>
+
                 <section class="subsection-input">
-                    <label for=""></label>
-                    <input type="text" name="ladoCuadrado" id="ladoCuadrado">
+                    <label for="ladoTrianguloEsca">Ingresa el lado del triangulo</label>
+                    <input type="text" name="ladoTrianguloEsca" id="ladoTrianguloEsca">
                 </section>
 
+                
                 <section class="subsection-button">
-                    <button id="btnCalcularAreaCuadrado">Calcular área</button>
-                    <button id="btnCalcularPerimetroCuadrado">Calcular Perimetro</button>
+                    <button id="btnCalcularAreaTrianguloEsca">Calcular área</button>
+                    <button id="btnCalcularPerimetroTrianguloEsca">Calcular Perimetro</button>
                 </section>
-
+                
                 <section class="subsection-result">
-                    <p id="resultAreaCuadrado" class="resultAreaCuadrado">Prueba</p>
-                    <p id="resultPerimetroCuadrado" class="resultPerimetroCuadrado">Prueba</p>
+                    <p id="resultAreaTrianguloEsca" class="resultAreaTrianguloEsca">Prueba</p>
+                    <p id="resultPerimetroTrianguloEsca" class="resultPerimetroTrianguloEsca">Prueba</p>
                 </section>
+            
             </section>
+
         </section>
 
         <!--Formulario para el circulo-->
         <section class="section">
 
+            <h2>Calcular área y perímetro de un Circulo</h2>
+
+            <section class="subsection-input">
+                <label for="radioCirculo">Ingresa el Radio del circulo</label>
+                <input type="text" name="radioCirculo" id="radioCirculo">
+            </section>
+
+            
+            <section class="subsection-button">
+                <button id="btnCalcularAreaTrianguloEsca">Calcular área</button>
+                <button id="btnCalcularPerimetroTrianguloEsca">Calcular Perimetro</button>
+            </section>
+                
+            <section class="subsection-result">
+                <p id="resultAreaCirculo" class="resultAreaCirculo">Prueba</p>
+                <p id="resultPerimetroCirculo" class="resultPerimetroCirculo">Prueba</p>
+            </section>
+        
         </section>
     </main>
+
+    <!--Scripts-->
     <script src="./js/triangulo.js"></script>
     <script src="./js/math.js"></script>
 </body>

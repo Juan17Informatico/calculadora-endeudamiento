@@ -37,12 +37,37 @@ main > .section{
     box-shadow: 5px 10px 10px 10px var(--shadow);
     border-radius: 15px;
 }
-/*Definimos el contenedor de la imagen*/
-.subsection-img{
+/*Cuadrado*/
+.section-cuadrado, .section-triangulo{
     display: flex;
     justify-content: center;
-    align-items: end;
-    height: 50%;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.section-triangulo:first-child{
+    
+}
+
+.section h2{
+    font-size: 24px;
+    margin: 4px;
+}
+
+.section label{
+    font-size:16px;
+    margin: 10px;
+}
+
+/*Hidden*/
+.subsection--2{
+    display: none!important;
+}
+/*Definimos el contenedor de la imagen*/
+.subsection-img{
+    margin: 20px;
+    height: 25%;
 }
 /*Tamanio de la imagen*/
 .section img{ 
@@ -68,7 +93,7 @@ main > .section{
 
 /*Input element*/
 .subsection-input input{
-    width: 50%;
+    width: 65%;
     height: 30px;
     font-size: 16px;
     border-radius: 15px;
