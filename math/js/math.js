@@ -42,10 +42,12 @@ btnCalcularAreaCuadrado.addEventListener('click', () => {
   const areaCuadrado = calcularCuadrado(ladoCuadrado.value);  // Obtenemos el objeto con los cálculos del área y el perímetro del cuadrado.
   // Validamos que el valor ingresado sea un número
   const validacionArea = validarNumero(areaCuadrado.area);
-
+  const exponenteDos = document.createElement('sup');
+  exponenteDos.textContent = '2';
   if (validacionArea) {
     // Muestra el resultado del cálculo del área en el elemento HTML correspondiente.
-    resultadoAreaCuadrado.innerHTML = `El área del cuadrado es: ${areaCuadrado.area}`;
+    resultadoAreaCuadrado.innerHTML = `El área del cuadrado es: ${areaCuadrado.area}m`;
+    resultadoAreaCuadrado.appendChild(exponenteDos);
   } else {
     // Muestra un mensaje de error si el valor no es un número válido.
     resultadoAreaCuadrado.innerHTML = `El valor ingresado no es un número válido`;
