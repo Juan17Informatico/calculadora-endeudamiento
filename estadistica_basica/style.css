@@ -1,0 +1,35 @@
+/* Definición de variables CSS personalizadas */
+:root {
+    --background-main: #34526c; /* Color de fondo principal */
+    --color: #e3f2ff; /* Color de texto principal */
+    --secondary-color: #3c5a75; /* Color de texto secundario */
+    --white: #fff;
+    --shadow: #172c3d
+}
+/*Estilos Globales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*Seccion de volver a inicio*/
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: var(--background-main);
+    color: var(--color);
+    padding: 20px;
+}
+aside > p > a{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color);
+}
+
+aside > p > a:hover{
+    color: #a9bccc;
+}
