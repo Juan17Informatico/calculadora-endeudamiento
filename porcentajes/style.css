@@ -4,14 +4,29 @@
     --color: #e3f2ff; /* Color de texto principal */
     --secondary-color: #3c5a75; /* Color de texto secundario */
     --white: #fff;
-    --shadow: #172c3d
+    --shadow: #172c3d;
 }
-/*Estilos Globales*/
-*{
+
+/* Reset de estilos y definición de fuente global */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Establece la fuente global como Roboto */
+}
+
+body{
+    background-color: var(--background-main); /* Utiliza el color de fondo principal definido en las variables */
+}
+/* Estilos para el encabezado principal */
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Establece la altura del contenedor principal al 100% del viewport */
+    gap: 20px; /* Espacio entre elementos secundarios dentro de .main */
+    padding: 10px; /* Relleno alrededor de .main */
 }
 /*Seccion de volver a inicio*/
 aside{

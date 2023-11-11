@@ -18,28 +18,37 @@
   <aside>
     <p><a href="../index.html">Inicio</a></p>
   </aside>
-  <h1>Cómo calcular precios con descuentos</h1>
-  <div>
-    <p>
+
+  <main class="main">
+
+    <h1 class="title-h1">Cómo calcular precios con descuentos</h1>
+
+    <p class="text">
       Calcula el porcentaje de descuento. Digita su precio y descuento
     </p>
-    <label for="price">
-      Precio
-    </label>
-    <input type="number" name="price" id="price" />
-    <div class="cupones">
-      <p>
-        Escribe el cupon que tienes
-      </p>
-      <label for="coupon">Descuento</label>
-      <input type="text" name="coupon" id="coupon" />
-      <button id="calcular">Calcular</button>
-    </div>
-    <div class="resultados">
-      <p id="resultCupon"></p>
-      <p id="result"></p>
-    </div>
-  </div>
+
+    <section class="section-1">
+
+      <div>
+        <label class="text" for="price">Precio</label>
+        <input type="text" name="price" id="price"/>
+      </div>
+
+      <div class="cupones">
+        <button class="button-coupon buttonCoupon1" id="buttonCoupon1">25%</button>
+        <button class="button-coupon buttonCoupon2" id="buttonCoupon2">30%</button>
+        <button class="button-coupon buttonCoupon3" id="buttonCoupon3">50%</button>
+      </div>
+
+      <div class="resultados">
+        <p>Descuento: <b id="resultCupon"></b></p>
+        <p>Total: <b id="result"></b></p>
+      </div>
+
+    </section>
+
+  </main>
+
   <script src="./porcentajes.js"></script>
 </body>
 
