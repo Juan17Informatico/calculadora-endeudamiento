@@ -13,13 +13,16 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background-color: var(--background-main)
+}
 /*Estilos para el contenedor principal del HTML*/
 main{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items:center; 
-    height: 100vh;
+    height: 90vh;
     background-color: var(--background-main);
     color: var(--color);
     gap: 20px;
@@ -36,14 +39,7 @@ main > .section{
     box-shadow: 5px 10px 10px 10px var(--shadow);
     border-radius: 15px;
 }
-/*Cuadrado*/
-.section-cuadrado, .section-triangulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-}
+
 
 /* .section-triangulo:first-child{
     
@@ -60,7 +56,7 @@ main > .section{
 }
 
 /*Hidden*/
-.subsection--2{
+ .hidden, .hidden-button{
     display: none!important;
 }
 /*Definimos el contenedor de la imagen*/

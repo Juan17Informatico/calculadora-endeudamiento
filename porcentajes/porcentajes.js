@@ -7,6 +7,7 @@ let couponList = [];
 couponList.push({
   name: "Cupon 1",
   discount: 30,
+  
 });
 
 couponList.push({
