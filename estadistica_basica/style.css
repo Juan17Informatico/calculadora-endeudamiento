@@ -1,20 +1,25 @@
 /* Definición de variables CSS personalizadas */
 :root {
-    --background-main: #34526c; /* Color de fondo principal */
-    --color: #e3f2ff; /* Color de texto principal */
-    --secondary-color: #3c5a75; /* Color de texto secundario */
+    --background-main: #34526c;
+    /* Color de fondo principal */
+    --color: #e3f2ff;
+    /* Color de texto principal */
+    --secondary-color: #3c5a75;
+    /* Color de texto secundario */
     --white: #fff;
     --shadow: #172c3d
 }
+
 /*Estilos Globales*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 /*Seccion de volver a inicio*/
-aside{
+aside {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -22,7 +27,8 @@ aside{
     color: var(--color);
     padding: 20px;
 }
-aside > p > a{
+
+aside>p>a {
     width: 100%;
     height: 100%;
     font-size: 18px;
@@ -30,6 +36,86 @@ aside > p > a{
     color: var(--color);
 }
 
-aside > p > a:hover{
+aside>p>a:hover {
     color: #a9bccc;
+}
+
+/*Design page*/
+body {
+    background-color: var(--background-main);
+    /* Utiliza el color de fondo principal definido en las variables */
+}
+
+/* Estilos para el encabezado principal */
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Establece la altura del contenedor principal al 100% del viewport */
+    gap: 20px;
+    /* Espacio entre elementos secundarios dentro de .main */
+    padding: 10px;
+    /* Relleno alrededor de .main */
+}
+
+main h1 {
+    color: var(--color);
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.section-container .calc-section {
+    display: flex;
+    width: 33.33%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-radius: 15px;
+    height: 60%;
+    box-shadow: 5px 10px 10px 10px var(--shadow);
+    /* Sombra */
+}
+
+.calc-section h2 {
+    font-size: 26px;
+    color: var(--color);
+}
+
+.calc-section form label {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    color: var(--color);
+    margin: 3px;
+}
+
+.calc-section form .container-input input {
+    width: 100%;
+    height: 26px;
+}
+
+.calc-section form input {
+    width: 35%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    
+}
+
+.form-input input:focus{
+    outline: none;
 }
