@@ -21,6 +21,7 @@
 /*Seccion de volver a inicio*/
 aside {
     display: flex;
+    height: 10vh;
     flex-direction: column;
     align-items: start;
     background-color: var(--background-main);
@@ -48,7 +49,7 @@ body {
 
 /* Estilos para el encabezado principal */
 main {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,6 +59,7 @@ main {
     /* Espacio entre elementos secundarios dentro de .main */
     padding: 10px;
     /* Relleno alrededor de .main */
+    
 }
 
 main h1 {
@@ -72,9 +74,10 @@ main h1 {
     gap: 20px;
     width: 100%;
     height: 100%;
+    
 }
 
-.section-container .calc-section {
+.calc-section {
     display: flex;
     width: 33.33%;
     flex-direction: column;
@@ -85,19 +88,36 @@ main h1 {
     height: 60%;
     box-shadow: 5px 10px 10px 10px var(--shadow);
     /* Sombra */
+    
 }
 
 .calc-section h2 {
     font-size: 26px;
     color: var(--color);
+    display: flex;
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
+.calc-section form{
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .calc-section form label {
     display: inline-block;
     width: 100%;
     font-size: 18px;
     color: var(--color);
     margin: 3px;
+}
+
+.container-input{
+    height: 20%;
 }
 
 .calc-section form .container-input input {
@@ -118,4 +138,44 @@ main h1 {
 
 .form-input input:focus{
     outline: none;
+}
+/*Button*/
+
+.container-button{
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-button button{
+    width: 20%;
+    height: 20px;
+    margin: 2px;
+    border-radius: 15px;
+    border: none;
+}
+
+.container-button button:hover{
+    background-color: var(--background-main);
+    border: 0.5px solid var(--shadow);
+    color: var(--color);
+    cursor: pointer;
+}
+
+/*average-inputs*/
+.average-inputs{
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+}
+
+.result{
+    width: 100%;
+    height: 20%;
+}
+
+.inputs{
+    width: 100%;
+    height: 20%;
 }
