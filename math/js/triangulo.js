@@ -63,3 +63,29 @@ function calcularAlturaTrianguloEscaleno(
   return Math.floor(altura)
 }*/
 console.groupEnd()
+/*Toggle Triangulo*/
+const btnTrianguloEscaleno = document.getElementById('hiddenEscaleno');
+const btnTrianguloIsosceles = document.getElementById('hiddenIsosceles');
+
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.subsection');
+
+  console.log({sections, sectionId})
+  sections.forEach(section => {
+
+    if (section.id === sectionId) {
+      section.classList.remove('hidden');
+    } else {
+      section.classList.add('hidden');
+    }
+  })
+}
+
+// Agregar eventos de clic a los botones
+btnTrianguloEscaleno.addEventListener('click', function () {
+  showSection('hiddenEscaleno');
+});
+
+btnTrianguloIsosceles.addEventListener('click', function () {
+  showSection('hiddenIsosceles');
+});
