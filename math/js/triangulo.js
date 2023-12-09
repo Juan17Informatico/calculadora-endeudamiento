@@ -1,22 +1,39 @@
-/**
- * 
- */
 console.group('Triangulo')
 
-const ladoTriangulo1 = 6
-const ladoTriangulo2 = 6
-const ladoTrianguloBase = 4
-const altura = 5.5
+//Variables para obtener el valor de los lados 
+const inputLadoTrianguloIsos = document.getElementById('ladoTrianguloIsos');
+const inputBaseTrianguloIsos = document.getElementById('baseTrianguloIsos');
+//Value de los input
+const valueLadoTrianguloIsos = Number(inputLadoTrianguloIsos.value);
+const valueBaseTrianguloIsos = Number(inputBaseTrianguloIsos.value);
+//Value de los botones
+const btnCalcularAlturaTrianguloIsos = document.getElementById('btnCalcularAlturaTrianguloIsos');
+const btnCalcularAreaTrianguloIsos = document.getElementById('btnCalcularAreaTrianguloIsos');
+const btnCalcularPerimetroTrianguloIsos = document.getElementById('btnCalcularPerimetroTrianguloIsos');
+//Resultados para el trianguloIsosceles
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + ladoTrianguloBase
-const areaTriangulo = (ladoTrianguloBase * altura) / 2
-
-function calcularPerimetroTriangulo(lado1, base) {
-  return {
-    perimetro: lado1 + lado2 + base,
-    area: (base * altura) / 2,
-  }
+/**
+ * Sirve para retornar el perimetro de un triangulo isosceles
+ * @param {lado} lado 
+ * @param {base} base 
+ * @returns 
+ */
+function calcularPerimetroTrianguloIsosceles(lado, base){
+  
+  // return (lado * 2) + base;
 }
+
+/** */
+function calcularAreaTrianguloIsosceles(lado){
+  return (lado * altura) / 2
+}
+
+/**
+ * Funcionalidad para calcular área y perímetro de los triangulos isosceles
+ */
+btnCalcularPerimetroTrianguloIsos.addEventListener('click', calcularPerimetroTrianguloIsosceles);
+/**/
+
 //Triángulo isosceles
 function calcularAlturaTriangulo(lado1, base) {
   if (lado1 == base) {
@@ -64,28 +81,35 @@ function calcularAlturaTrianguloEscaleno(
 }*/
 console.groupEnd()
 /*Toggle Triangulo*/
-const btnTrianguloEscaleno = document.getElementById('hiddenEscaleno');
-const btnTrianguloIsosceles = document.getElementById('hiddenIsosceles');
+// Obtener referencias a los botones de los triángulos escaleno e isósceles
+const btnTrianguloEscaleno = document.getElementById('hiddenEscalenoBtn');
+const btnTrianguloIsosceles = document.getElementById('hiddenIsoscelesBtn');
 
+// Función para mostrar la sección correspondiente al ID recibido
 function showSection(sectionId) {
+  // Obtener todas las secciones con la clase 'subsection'
   const sections = document.querySelectorAll('.subsection');
 
-  console.log({sections, sectionId})
+  // Iterar sobre todas las secciones
   sections.forEach(section => {
-
+    // Comprobar si el ID de la sección coincide con el ID recibido como argumento
     if (section.id === sectionId) {
+      // Si coincide, eliminar la clase 'hidden' para mostrar la sección
       section.classList.remove('hidden');
     } else {
+      // Si no coincide, agregar la clase 'hidden' para ocultar la sección
       section.classList.add('hidden');
     }
   })
 }
 
-// Agregar eventos de clic a los botones
+// Agregar eventos de clic a los botones para mostrar las secciones correspondientes
 btnTrianguloEscaleno.addEventListener('click', function () {
+  // Llamar a la función showSection con el ID del triángulo escaleno
   showSection('hiddenEscaleno');
 });
 
 btnTrianguloIsosceles.addEventListener('click', function () {
+  // Llamar a la función showSection con el ID del triángulo isósceles
   showSection('hiddenIsosceles');
 });

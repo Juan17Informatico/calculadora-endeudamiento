@@ -50,12 +50,12 @@
         <!--Formulario para input del lado del triangulo-->
         <section class="section">
 
-            <button class="hidden-button" id="hiddenEscaleno">Escaleno</button>
-            <button class="hidden-button" id="hiddenIsosceles">Isosceles</button>
+            <button class="hidden-button" id="hiddenIsoscelesBtn">Isosceles</button>
+            <button class="hidden-button" id="hiddenEscalenoBtn">Escaleno</button>
 
             <section class="section-triangulo">
 
-                <section class="subsection subsection--1">
+                <section class="subsection subsection--1" id="hiddenIsosceles">
 
                     <h2>Calcular altura, área y perímetro de un triángulo isósceles</h2>
 
@@ -76,6 +76,11 @@
                     </section>
 
                     <section class="subsection-result">
+                        
+                        <p>
+                            Altura: <b id="resultAlturaTrianguloIsos" class="resultAlturaTrianguloIsos"></b>
+                        </p>
+
                         <p>
                             Área: <b id="resultAreaTrianguloIsos" class="resultAreaTrianguloIsos"></b>
                         </p>
@@ -90,7 +95,7 @@
 
                 <!-- <hr> -->
 
-                <section class="subsection subsection--2 hidden">
+                <section class="subsection subsection--2 hidden" id="hiddenEscaleno">
 
                     <h2>Calcular altura, área y perímetro de un Triangulo Escaleno</h2>
 
@@ -144,6 +149,7 @@
 
                 <section class="subsection-result">
 
+                    
                     <p>
                         Área: <b id="resultAreaCirculo" class="resultAreaCirculo"></b>
                     </p>
