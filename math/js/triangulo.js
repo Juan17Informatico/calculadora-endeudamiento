@@ -3,46 +3,64 @@ console.group('Triangulo')
 //Variables para obtener el valor de los lados 
 const inputLadoTrianguloIsos = document.getElementById('ladoTrianguloIsos');
 const inputBaseTrianguloIsos = document.getElementById('baseTrianguloIsos');
-//Value de los input
-const valueLadoTrianguloIsos = Number(inputLadoTrianguloIsos.value);
-const valueBaseTrianguloIsos = Number(inputBaseTrianguloIsos.value);
 //Value de los botones
 const btnCalcularAlturaTrianguloIsos = document.getElementById('btnCalcularAlturaTrianguloIsos');
 const btnCalcularAreaTrianguloIsos = document.getElementById('btnCalcularAreaTrianguloIsos');
 const btnCalcularPerimetroTrianguloIsos = document.getElementById('btnCalcularPerimetroTrianguloIsos');
 //Resultados para el trianguloIsosceles
-
+const resultAlturaTrianguloIsos = document.getElementById('resultAlturaTrianguloIsos');
+const resultAreaTrianguloIsos = document.getElementById('resultAreaTrianguloIsos');
+const resultPerimetroTrianguloIsos = document.getElementById('resultPerimetroTrianguloIsos');
 /**
  * Sirve para retornar el perimetro de un triangulo isosceles
  * @param {lado} lado 
  * @param {base} base 
  * @returns 
  */
-function calcularPerimetroTrianguloIsosceles(lado, base){
-  
-  // return (lado * 2) + base;
+function calcularPerimetroTrianguloIsosceles(){
+  //Value de los input
+  const lado = Number(inputLadoTrianguloIsos.value);
+  const base = Number(inputBaseTrianguloIsos.value);
+  const perimetro = (lado * 2) + base;
+  resultPerimetroTrianguloIsos.innerHTML = perimetro;
 }
 
-/** */
-function calcularAreaTrianguloIsosceles(lado){
-  return (lado * altura) / 2
+
+function calcularAreaTrianguloIsosceles(){
+  const lado = Number(inputLadoTrianguloIsos.value);
+  const base = Number(inputBaseTrianguloIsos.value);
+  const altura = Number(calcularAlturaTrianguloIsosceles(lado, base));
+  
+  const area = (base * altura) / 2; 
+  if(isNaN(altura)){
+
+    resultAreaTrianguloIsos.innerHTML = 'Esto no es un triangulo isósceles';
+  
+  }else{
+    resultAreaTrianguloIsos.innerHTML = area;
+  }
+
+}
+
+//Triángulo isosceles
+function calcularAlturaTrianguloIsosceles(lado, base) {
+  if (lado == base) {
+     return NaN;
+  } else {
+    // h = raizcuadrada(lado1**2 - (b**2)/4)
+    
+    return Math.sqrt(lado ** 2 - (base / 2) ** 2);
+  }
 }
 
 /**
  * Funcionalidad para calcular área y perímetro de los triangulos isosceles
  */
 btnCalcularPerimetroTrianguloIsos.addEventListener('click', calcularPerimetroTrianguloIsosceles);
+btnCalcularAreaTrianguloIsos.addEventListener('click', calcularAreaTrianguloIsosceles)
 /**/
 
-//Triángulo isosceles
-function calcularAlturaTriangulo(lado1, base) {
-  if (lado1 == base) {
-    console.warn('Este no es un triángulo isosceles')
-  } else {
-    // h = raizcuadrada(lado1**2 - (b**2)/4)
-    return Math.sqrt(lado1 ** 2 - base ** 2 / 4)
-  }
-}
+
 //Triángulo Escaleno
 function calcularAlturaTrianguloEscaleno(
   lado1Escaleno,
