@@ -17,7 +17,7 @@ const resultPerimetroTrianguloIsos = document.getElementById('resultPerimetroTri
  * @param {base} base 
  * @returns 
  */
-function calcularPerimetroTrianguloIsosceles(){
+function calcularPerimetroTrianguloIsosceles() {
   //Value de los input
   const lado = Number(inputLadoTrianguloIsos.value);
   const base = Number(inputBaseTrianguloIsos.value);
@@ -26,17 +26,17 @@ function calcularPerimetroTrianguloIsosceles(){
 }
 
 
-function calcularAreaTrianguloIsosceles(){
+function calcularAreaTrianguloIsosceles() {
   const lado = Number(inputLadoTrianguloIsos.value);
   const base = Number(inputBaseTrianguloIsos.value);
   const altura = Number(calcularAlturaTrianguloIsosceles(lado, base));
-  
-  const area = (base * altura) / 2; 
-  if(isNaN(altura)){
+
+  const area = (base * altura) / 2;
+  if (isNaN(altura)) {
 
     resultAreaTrianguloIsos.innerHTML = 'Esto no es un triangulo isósceles';
-  
-  }else{
+
+  } else {
     resultAreaTrianguloIsos.innerHTML = area;
   }
 
@@ -45,10 +45,12 @@ function calcularAreaTrianguloIsosceles(){
 //Triángulo isosceles
 function calcularAlturaTrianguloIsosceles(lado, base) {
   if (lado == base) {
-     return NaN;
+    return NaN;
+  } else if (lado < base) {
+    return NaN;
   } else {
     // h = raizcuadrada(lado1**2 - (b**2)/4)
-    
+
     return Math.sqrt(lado ** 2 - (base / 2) ** 2);
   }
 }
@@ -57,16 +59,55 @@ function calcularAlturaTrianguloIsosceles(lado, base) {
  * Funcionalidad para calcular área y perímetro de los triangulos isosceles
  */
 btnCalcularPerimetroTrianguloIsos.addEventListener('click', calcularPerimetroTrianguloIsosceles);
-btnCalcularAreaTrianguloIsos.addEventListener('click', calcularAreaTrianguloIsosceles)
+btnCalcularAreaTrianguloIsos.addEventListener('click', calcularAreaTrianguloIsosceles);
+btnCalcularAlturaTrianguloIsos.addEventListener('click', () => {
+  const ladoAl = Number(inputLadoTrianguloIsos.value);
+  const baseAl = Number(inputBaseTrianguloIsos.value);
+  const altura = calcularAlturaTrianguloIsosceles(ladoAl, baseAl);
+
+  if (isNaN(altura)) {
+    resultAlturaTrianguloIsos.innerHTML = 'Esto no es un triángulo isósceles';
+  } else {
+    resultAlturaTrianguloIsos.innerHTML = altura;
+  }
+})
 /**/
 
+/**
+ * Triángulo Escaleno 
+ * Donde sus tres lados son desiguales
+ */
 
-//Triángulo Escaleno
-function calcularAlturaTrianguloEscaleno(
-  lado1Escaleno,
-  lado2Escaleno,
-  ladoBaseEscaleno,
-) {
+//Variables Inputs: 
+const ladoTrianguloEscaA = document.getElementById('ladoTrianguloEscaA');
+const ladoTrianguloEscaB = document.getElementById('ladoTrianguloEscaB');
+const ladoTrianguloEscaC = document.getElementById('ladoTrianguloEscaC');
+//Variable para botones: 
+const btnCalcularAreaTrianguloEsca = document.getElementById('btnCalcularAreaTrianguloEsca');
+const btnCalcularPerimetroTrianguloEsca = document.getElementById('btnCalcularPerimetroTrianguloEsca');
+const btnCalcularAlturaTrianguloEsca = document.getElementById('btnCalcularAlturaTrianguloEsca');
+//Variable para resultados en pantalla: 
+const resultAreaTrianguloEsca = document.getElementById('resultAreaTrianguloEsca');
+const resultPerimetroTrianguloEsca = document.getElementById('resultPerimetroTrianguloEsca');
+const resultAlturaTrianguloEsca = document.getElementById('resultAlturaTrianguloEsca');
+
+
+function calcularAreaTrianguloEscaleno(){
+  const valueTrianguloEscalenoA = Number(ladoTrianguloEscaA.value);
+  const valueTrianguloEscalenoB = Number(ladoTrianguloEscaB.value);
+  const valueTrianguloEscalenoC = Number(ladoTrianguloEscaC.value);
+
+  const altura = calcularAlturaTrianguloEscaleno();
+
+  //Valida si el usuario ingresa los tres lados del triangulo escaleno, en caso de no, valida si conoce la altura y/o la base
+  if(valueTrianguloEscalenoA && valueTrianguloEscalenoB && valueTrianguloEscalenoC){
+    return true;
+  }else if(valueTrianguloEscalenoC && altura){
+    return true;
+  }
+}
+
+function calcularAlturaTrianguloEscaleno(lado1Escaleno, lado2Escaleno, ladoBaseEscaleno) {
   const semiPerimetro = (lado1Escaleno + lado2Escaleno + ladoBaseEscaleno) / 2
   return (
     2 / ladoBaseEscaleno *
@@ -79,25 +120,6 @@ function calcularAlturaTrianguloEscaleno(
   )
 }
 
-/**
- * Solución en y para platzi:
- * function solution(lado1, lado2, lado3) {
-  // Tu código aquí 👈
-  if (lado1 == lado2 || lado2 == lado3 || lado3 == lado1) {
-    return false
-  }
-  const semiPerimetro = (lado1 + lado2 + lado3) / 2
-  const altura = (2 / lado1 *
-    Math.sqrt(
-      semiPerimetro *
-      (semiPerimetro - lado1) *
-      (semiPerimetro - lado2) *
-      (semiPerimetro - lado3),
-    ))
-
-  return Math.floor(altura)
-}*/
-console.groupEnd()
 /*Toggle Triangulo*/
 // Obtener referencias a los botones de los triángulos escaleno e isósceles
 const btnTrianguloEscaleno = document.getElementById('hiddenEscalenoBtn');

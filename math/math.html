@@ -100,24 +100,39 @@
                     <h2>Calcular altura, área y perímetro de un Triangulo Escaleno</h2>
 
                     <section class="subsection-input">
-                        <label for="ladoTrianguloEsca">Ingresa el lado del triangulo</label>
-                        <input type="text" name="ladoTrianguloEsca" id="ladoTrianguloEsca">
+                        
+                        <label for="ladoTrianguloEscaA">Lado: <span>A</span></label>
+                        <input type="text" name="ladoTrianguloEscaA" id="ladoTrianguloEscaA">
+
+                        <label for="ladoTrianguloEscaB">Lado: <span>B</span></label>
+                        <input type="text" name="ladoTrianguloEscaB" id="ladoTrianguloEscaB">
+                        
+                        <label for="ladoTrianguloEscaC">Lado (donde C es la base del triangulo): <span>C</span></label>
+                        <input type="text" name="ladoTrianguloEscaC" id="ladoTrianguloEscaC">
+                        
+
                     </section>
 
 
                     <section class="subsection-button">
                         <button id="btnCalcularAreaTrianguloEsca">Calcular Área</button>
                         <button id="btnCalcularPerimetroTrianguloEsca">Calcular Perímetro</button>
+                        <button id="btnCalcularAlturaTrianguloEsca">Calcular Altura</button>
                     </section>
 
                     <section class="subsection-result">
                         <p>
-                            Área: <b id="resultAreaTrianguloEsca" class="resultAreaTrianguloEsca"></b>
+                            Área: <span id="resultAreaTrianguloEsca" class="resultAreaTrianguloEsca"></span>
                         </p>
 
                         <p>
-                            Perímetro: <b id="resultPerimetroTrianguloEsca" class="resultPerimetroTrianguloEsca"></b>
+                            Perímetro: <span id="resultPerimetroTrianguloEsca" class="resultPerimetroTrianguloEsca"></span>
                         </p>
+
+                        <p>
+                            Altura: <span id="resultAlturaTrianguloEsca" class="resultAlturaTrianguloEsca"></span>
+                        </p>
+
                     </section>
 
                 </section>
