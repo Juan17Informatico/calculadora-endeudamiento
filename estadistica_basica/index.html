@@ -32,95 +32,74 @@
       <!-- Formulario para calcular el promedio -->
       <div class="calc-section">
         <h2>Calcular Promedio</h2>
-        <form id="average-form">
-
-          <div class="container-input">
-
-            <label for="count-average">Cantidad de datos:</label>
-            <input type="text" id="count-average" name="count-average" min="1">
-
-          </div>
+        <div class="form" id="average-form">
 
           <div id="average-inputs" class="inputs">
             <label for="input-avarage">Valor</label>
-            <input type="text" class="input-avarage" id="input-avarage">
-            
+            <!-- <input type="text" class="input-avarage" id="input-avarage"> -->
+            <textarea name="input-avarage" class="textarea" id="input-avarage" cols="40" rows="8" placeholder="1,2,3"></textarea>
           </div>
 
           <div class="container-button">
-
-            <button type="submit">Calcular</button>
-            <button type="button" id="clear-average">Limpiar</button>
+            
+            <button id="avarage-btn">Calcular</button>
+            <button id="clear-average">Limpiar</button>
 
           </div>
 
 
-          <p class="result" id="average-result">Result</p>
+          <p class="result">Resultado: <span class="result" id="average-result"></span></p>
 
-        </form>
+        </div>
       </div>
 
       <!-- Formulario para calcular la mediana -->
       <div class="calc-section">
         <h2>Calcular Mediana</h2>
-        <form id="median-form">
-
-          <div class="container-input">
-
-            <label for="count-median">Cantidad de datos:</label>
-            <input type="text" id="count-median" name="count-median" >
-
-          </div>
+        <div class="form" id="median-form">
 
           <div id="median-inputs" class="inputs">
 
             <label for="input-median">Valor</label>
-            <input type="text" class="input-median" id="input-median">
-
+            <!-- <input type="text" class="input-median" id="input-median"> -->
+            <textarea name="input-median" class="textarea" id="input-median" cols="40" rows="8" placeholder="1,2,3"></textarea>
 
           </div>
 
           <div class="container-button">
 
-            <button type="submit">Calcular</button>
+            <button type="submit" id="btnMedian">Calcular</button>
             <button type="button" id="clear-median">Limpiar</button>
 
           </div>
 
-          <p class="result" id="median-result">Result</p>
+          <p class="result">Resultado: <span class="result" id="median-result"></span></p>
 
-        </form>
+        </div>
       </div>
 
       <!-- Formulario para calcular la moda -->
       <div class="calc-section">
         <h2>Calcular Moda</h2>
-        <form id="mode-form">
-
-          <div class="container-input">
-
-            <label for="count-mode">Cantidad de datos:</label>
-            <input type="text" id="count-mode" name="count-mode" min="1">
-
-          </div>
+        <div class="form" id="mode-form">
 
           <div id="mode-inputs" class="inputs">
             <label for="input-mode">Valor</label>
-            <input type="text" class="input-mode" id="input-mode">
-
+            <!-- <input type="text" class="input-mode" id="input-mode"> -->
+            <textarea name="input-mode" class="textarea" id="input-mode" cols="40" rows="8" placeholder="1,2,3"></textarea>
           </div>
 
           <div class="container-button">
 
-            <button type="submit">Calcular</button>
+            <button type="submit" id="btnMode">Calcular</button>
             <button type="button" id="clear-mode">Limpiar</button>
 
           </div>
 
 
-          <p class="result" id="mode-result">Result</p>
+          <p class="result">Resultado: <span class="result" id="mode-result"></span></p>
 
-        </form>
+        </div>
       </div>
 
     </section>
@@ -128,6 +107,7 @@
   </main>
 
   <script src="./app.js"></script>
+  <script src="./calculo.js"></script>
 </body>
 
 </html>

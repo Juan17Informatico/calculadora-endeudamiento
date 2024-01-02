@@ -49,9 +49,10 @@ PlatziMath.esPar = function (array) {
     //Recuerda: el número cero los condicionales en JavaScript lo interpretan como false 
 }
 
+//Recibe un array de valores
 PlatziMath.calcularMediana = function (list) {
     //Define si la lista es par 
-    const listPar = esPar(list);
+    const listPar = PlatziMath.esPar(list);
     
     //El método sort ordena elementos, en este caso, ordena elementos según el parámetro indicado, o sea, de menor a mayor 
     list.sort(function (a,b){
@@ -68,7 +69,7 @@ PlatziMath.calcularMediana = function (list) {
         listaMitades.push(mitad1ListaPar);
         listaMitades.push(mitad2ListaPar);
         //Se crea una constante para almacenar el promedio de los valores de las mitades
-        const medianaListaPar = promedioNumeros(listaMitades);
+        const medianaListaPar = PlatziMath.promedioNumeros(listaMitades);
         
         return medianaListaPar;
     } else {
@@ -99,10 +100,10 @@ PlatziMath.calcularModa = function (list){
     }
     //Object.entries convierte objetos en array 
     const listArray = Object.entries(listCount);
-    const listOrdered = ordenarListaBidimensional(listArray, 1);
+    const listOrdered = PlatziMath.ordenarListaBidimensional(listArray, 1);
     const listMaxnumber = listOrdered[listArray.length - 1]
     console.log(listArray, listMaxnumber, listOrdered);
-    return 'La moda es: ' + listMaxnumber[0];
+    return listMaxnumber[0];
 }
 /**
  * Función ordenar lista
